@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>todo list</title>
+    <script>
+        tailwind.config = {
+          darkMode: "class",
+        };
+      </script>
+</head>
+
+<body class="bg-body dark:bg-body-dark">
+    <header>
+        <div class="bg-white flex items-center p-3 m-4 border border-white rounded-lg md:hidden dark:bg-side-bar-dark">
+            <button id="bars"><i class="fas fa-bars dark:text-white"></i></button>
+            <div class="mx-auto text-base font-bold font-colorP dark:text-white">کوئرا لیست</div>
+        </div>
+    </header>
+    <main>
+        <div class="m-4 flex flex-col md:flex-row">
+            <div class="md:bg-white shadow-sidebar rounded-2xl dark:bg-side-bar-dark">
+                <div class="flex items-center gap-3 m-4 md:hidden">
+                    <img alt="user" src="./assets/png/Ellipse 135 (2).png" class="w-14 h-14">
+                    <div>
+                        <h2 class="font-colorP text-lg font-extrabold dark:text-white">سلام، ارغوان</h2>
+                        <p class="text-sm font-semibold font-color dark:font-color-dark">امروز، سه‌شنبه، ۵ بهمن ۱۴۰۲</p>
+                    </div>
+                </div>
+
+
+                <div id="side-bar" class="fixed md:static flex flex-col p-4 top-0 right-0 bottom-0 width-side-bar bg-white gap-4 dark:bg-side-bar-dark fade-animation fade-out">
+                    <div class="flex justify-between items-center p-3 m-4 bg-white md:hidden dark:bg-side-bar-dark">
+                        <div class="mx-auto text-base font-bold font-colorP dark:text-white">کوئرا لیست</div>
+                        <button id="close-bars"><i class="fa fa-times dark:text-white" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="hidden md:flex items-center gap-3 pb-7 mt-12">
+                        <img alt="user" src="./assets/png/Ellipse 135 (2).png" class="w-14 h-14">
+                        <div>
+                            <h2 class="font-colorP text-lg font-extrabold dark:text-white">سلام، ارغوان</h2>
+                            <p class="text-sm font-semibold font-color dark:font-color-dark">امروز، سه‌شنبه، ۵ بهمن ۱۴۰۲</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 mt-6 dark:bg-items-dark py-3 px-5 rounded-lg">
+                        <i class="fa fa-home font-color-primary dark:text-white" aria-hidden="true"></i>
+                        <span class="text-base font-bold font-color-primary dark:text-white">خانه</span>
+                    </div>
+                    <div class="flex items-center gap-4 py-3 px-5 rounded-lg">
+                        <i class="fa fa-tasks dark:text-white" aria-hidden="true"></i>
+                        <span class="text-base font-bold font-color-items dark:text-white">تسک ها</span>
+                    </div>
+                    <div class="flex items-center gap-4 py-3 px-5 rounded-lg">
+                        <i class="fa fa-calendar dark:text-white" aria-hidden="true"></i>
+                        <span class="text-base font-bold font-color-items dark:text-white">تقویم</span>
+                    </div>
+                    <div class="flex items-center gap-4 py-3 px-5 rounded-lg">
+                        <i class="fa-light fa-file-chart-column dark:text-white"></i>
+                        <span class="text-base font-bold font-color-items dark:text-white">گزارشات</span>
+                    </div>
+                    <div class="flex items-center gap-4 py-3 px-5 rounded-lg">
+                        <i class="fa fa-cog dark:text-white" aria-hidden="true"></i>
+                        <span class="text-base font-bold font-color-items dark:text-white">تنظیمات</span>
+                    </div>
+                    <div class="flex items-center gap-4 py-3 px-5 rounded-lg">
+                        <i class="fa-regular fa-headset dark:text-white"></i>
+                        <span class="text-base font-bold font-color-items dark:text-white">پشتیبانی</span>
+                    </div>
+                    <div class="flex items-center gap-4 py-3 px-5 rounded-lg">
+                        <i class="fa-regular fa-user dark:text-white"></i>
+                        <span class="text-base font-bold font-color-items dark:text-white">پروفایل</span>
+                    </div>
+                    <div class="flex flex-col justify-center mt-32 gap-6 mx-4 mb-10">
+                        <div
+                            class="flex justify-center gap-1 bg-button p-1 rounded-lg dark:bg-button-dark">
+                            <button class="rounded-md bg-white flex items-center gap-3 py-1.5 px-4 dark:bg-button-sun-dark" id="light">
+                                <i class="fa-light fa-sun-bright dark:text-white"></i>
+                                <span class="text-sm font-semibold dark:text-white">روشن</span>
+                            </button>
+                            <button class="rounded-md bg-white flex items-center gap-3 py-1.5 px-4 dark:bg-button-moon-dark" id="dark">
+                                <i class="fa-light fa-moon dark:text-white"></i>
+                                <span class="text-sm font-semibold dark:text-white">تاریک</span>
+                            </button>
+                        </div>
+                        <div class="h-px bg-line dark:text-white"></div>
+                        <div class="flex items-center gap-4">
+                            <i class="fa-solid fa-right-from-bracket font-color-items dark:text-white"></i>
+                            <span class="font-color-items dark:text-white">خروج</span>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="marginT md:mx-52 w-full">
+                <h1 class="text-base font-extrabold font-colorP md:text-xl dark:text-white">تسک های امروز</h1>
+                <h2 class="text-xs font-normal mt-1 font-color-title md:text-sm dark:font-color-dark">تسکی برای امروز نداری!</h2>
+
+                <!-- درصورت نداشتن تسک برای انجام -->
+                <div class="add-task flex items-center gap-2 border-task-add p-4 mt-4">
+                    <i class="fa fa-plus font-color-primary dark:font-color-primary-dark" aria-hidden="true"></i>
+                    <h2 class="font-color-primary text-sm font-semibold md:text-base dark:font-color-primary-dark">افزودن وظیفه جدید</h2>
+                </div>
+                <div class="background-default text-center flex flex-col justify-center items-center gap-6 mt-9">
+                    <img alt="todo list" src="./assets/png/2143202_Artboard 1.png" class="md:w-72 md:h-60">
+                    <h3 class="text-base font-extrabold font-color">چه کارهایی امروز برای انجام داری؟</h3>
+                    <p class="text-sm font-semibold font-color-todo">میتونی الان تسک‌هاتو اینجا بنویسی و برنامه ریزی رو شروع کنی!</p>
+                </div>
+                <!-- پایان در صورت نداشتن تسک برای انجام -->
+
+                <!-- افزودن تسک -->
+                <div class="definition-task hidden flex flex-col gap-4 bg-white border-task rounded-xl p-4 mt-7 shadow-task dark:bg-body-dark">
+                    <input id="task-name" type="text" placeholder="نام تسک" class="dark:bg-body-dark"/>
+                    <textarea name="" id="descriptin" placeholder="توضیحات" rows="2" class="w-full resize-none mt-2 dark:bg-body-dark"></textarea>
+                    <button id="priority" class="flex items-center max-w-fit gap-2 border-task rounded py-1 px-2">
+                        <img id="tag-right" alt="tag" src="./assets/png/tag-right.png">
+                        <img id="tag-bottom" alt="tag" class="hidden" src="./assets/png/tag-right2.png">
+                        <span class="text-xs font-semibold md:text-sm dark:font-color-todo-dark">تگ ها</span>
+                    </button>
+                    <div id="priority-items" class="hidden flex items-center gap-4 rounded-lg border-div p-2.5 max-w-fit shadow-priority">
+                        <button id="priority-low" class="bg-Priority-low font-priority-low py-0.5 px-2 rounded">پایین</button>
+                        <div class="w-px h-5 bg-div"></div>
+                        <button id="priority-medium" class="bg-Priority-medium font-priority-medium py-0.5 px-2 rounded">متوسط</button>
+                        <div class="w-px h-5 bg-div"></div>
+                        <button id="priority-high" class="bg-Priority-high font-priority-high py-0.5 px-2 rounded">بالا</button>
+                    </div>
+                    <div id="low" class="hidden flex items-center bg-Priority-low gap-1.5 py-1 px-2 rounded max-w-fit">
+                        <button><i class="fa fa-times dark:text-white" aria-hidden="true"></i></button>
+                        <button class="font-priority-low">پایین</button>
+                    </div>
+                    <div id="medium" class="hidden flex items-center bg-Priority-medium gap-1.5 py-1 px-2 rounded max-w-fit">
+                        <button><i class="fa fa-times dark:text-white" aria-hidden="true"></i></button>
+                        <button class="font-priority-medium">متوسط</button>
+                    </div>
+                    <div id="high" class="hidden flex items-center bg-Priority-high gap-1.5 py-1 px-2 rounded max-w-fit">
+                        <button><i class="fa fa-times dark:text-white" aria-hidden="true"></i></button>
+                        <button class=" font-priority-high">بالا</button>
+                    </div>
+                    <div class="h-px bg-line"></div>
+                    <div class="flex items-center gap-1.5 mr-auto">
+                        <button class="w-8 h-8 bg-button-close rounded-md felx justify-center items-center dark:bg-body-dark">
+                            <i class="fa fa-times dark:bg-button-moon-dark dark:text-white" aria-hidden="true"></i>
+                        </button>
+                        <button id="btn-add-task" class="text-white bg-primary py-1.5 px-4 rounded-md text-xs font-semibold md:text-sm dark:bg-button-moon-dark">اضافه کردن تسک</button>
+                    </div>
+                </div>
+                <!-- پایان افزودن تسک -->
+
+                <!-- تسک هایی که باید انجام شود -->
+                <div class="border-task rounded-xl py-3 px-4 mt-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center  gap-4">
+                        <input class="w-5 h-5" type="checkbox"/>
+                        <h2 class="text-sm font-semibold font-colorP md:text-base font-bold dark:text-white">جلسه با مدیران پروژه</h2>
+                        <div class="hidden md:block rounded py-0.5 px-2 bg-Priority-high text-xs font-bold font-priority-high max-w-fit mt-4 md:mt-0">بالا</div>
+                        </div>
+                        <i class="fa fa-ellipsis-v dark:text-white" aria-hidden="true"></i>
+                    </div>
+                    <div class="rounded py-0.5 px-2 bg-Priority-high font-priority-high text-xs font-semibold max-w-fit mt-4 md:hidden">بالا</div>
+                    <p class="text-xs font-normal font-color-description mt-4 md:text-sm dark:font-color-description-dark">جلسه با محسن یگانه و مریم جلالی</p>
+                </div>
+                <!-- پایان تسک هایی که باید انجام شود -->
+
+                <h2 class="text-base font-extrabold font-colorP md:text-xl mt-9 dark:text-white">تسک های انجام شده</h2>
+                <p class="text-xs font-extrabold md:text-sm font-color-title mt-1 dark:font-color-description-dark">3 تسک را باید انجام دهید.</p>
+            </div>
+        </div>
+    </main>
+    <script src="./main.js"></script>
+</body>
+
+</html>
