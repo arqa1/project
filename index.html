@@ -141,7 +141,7 @@
                     </div>
                     <div class="h-px bg-line"></div>
                     <div class="flex items-center gap-1.5 mr-auto">
-                        <button class="w-8 h-8 bg-button-close rounded-md felx justify-center items-center dark:bg-body-dark">
+                        <button id="close-define-task" class="w-8 h-8 bg-button-close rounded-md felx justify-center items-center dark:bg-body-dark">
                             <i class="fa fa-times dark:bg-button-moon-dark dark:text-white" aria-hidden="true"></i>
                         </button>
                         <button id="btn-add-task" class="text-white bg-primary py-1.5 px-4 rounded-md text-xs font-semibold md:text-sm dark:bg-button-moon-dark">اضافه کردن تسک</button>
@@ -150,17 +150,23 @@
                 <!-- پایان افزودن تسک -->
 
                 <!-- تسک هایی که باید انجام شود -->
-                <div class="border-task rounded-xl py-3 px-4 mt-4">
+                <div class="border-task rounded-xl py-3 px-4 mt-4 parentDiv">
+                    <!-- <div class="w-1 h-[42px] bg-[#FFAF37] grow-1"></div> -->
                     <div class="flex items-center justify-between">
-                        <div class="flex items-center  gap-4">
+                        <div class="flex items-center gap-4 myDiv">
                         <input class="w-5 h-5" type="checkbox"/>
-                        <h2 class="text-sm font-semibold font-colorP md:text-base font-bold dark:text-white">جلسه با مدیران پروژه</h2>
+                        <h2 class="text-sm font-semibold font-colorP md:text-base font-bold dark:text-white"></h2>
                         <div class="hidden md:block rounded py-0.5 px-2 bg-Priority-high text-xs font-bold font-priority-high max-w-fit mt-4 md:mt-0">بالا</div>
                         </div>
-                        <i class="fa fa-ellipsis-v dark:text-white" aria-hidden="true"></i>
+                        <i id="modify-options" class="fa fa-ellipsis-v dark:text-white" aria-hidden="true"></i>
+                    </div>
+                    <div id="modify" class="hidden flex items-center rounded-lg p-[5px] gap-2.5 max-w-fit mr-auto border border-[#EBEDEF]">
+                        <i class="fa-regular fa-bin-recycle text-[#5C5F61]"></i>
+                        <div class="w-px h-2 bg-div"></div>
+                        <i class="fa-regular fa-pen-to-square text-[#5C5F61]"></i>
                     </div>
                     <div class="rounded py-0.5 px-2 bg-Priority-high font-priority-high text-xs font-semibold max-w-fit mt-4 md:hidden">بالا</div>
-                    <p class="text-xs font-normal font-color-description mt-4 md:text-sm dark:font-color-description-dark">جلسه با محسن یگانه و مریم جلالی</p>
+                    <p class="text-xs font-normal font-color-description mt-4 md:text-sm dark:font-color-description-dark"></p>
                 </div>
                 <!-- پایان تسک هایی که باید انجام شود -->
 
