@@ -1,179 +1,193 @@
 * {
- margin: 0;
- padding: 0;
- box-sizing: border-box;
- font-family: yekan,sans-serif;
-}
-
-@font-face {
-    font-family: yekan;
-    src: url(./assets/B_Yekan/Yekan.ttf);
-}
-
-.bg-body{
-    background-color: #FEFEFE;
-}
-
-.dark .dark\:bg-body-dark{
-    background-color: #060C18;
-}
-
-.dark .dark\:bg-side-bar-dark{
-    background-color: #091120;
-}
-
-.font-colorP{
-    color: #242424;
-}
-
-.font-color{
-    color:#7D7D7F;
-}
-
-.dark .dark\:font-color-dark{
-    color:#848890;
-}
-
-.font-color-items{
-    color:#525252;
-}
-
-.font-color-title{
-    color:#696969;
-}
-
-.font-color-primary{
-    color:#007BFF;
-}
-
-.dark .dark\:font-color-primary-dark{
-    color:#57A8FF;
-}
-
-.bg-primary{
-    background-color: rgba(0, 123, 255, 0.6) ;
-}
-
-.font-color-todo{
-    color:#AFAEB2;
-}
-
-.dark .dark\:font-color-todo-dark{
-    color:#AFAEB2;
-}
-
-.bg-button{
-    background-color: #F7F7F7;
-}
-
-.dark .dark\:bg-button-dark{
-    background-color: #0C1B31;
-}
-
-.dark .dark\:bg-button-moon-dark{
-    background-color: #002247;
-}
-
-.dark .dark\:bg-button-sun-dark{
-    background-color: #0C1B31;
-}
-
-.dark .dark\:bg-items-dark{
-    background-color: #041933;
-}
-
-.bg-button-close{
-    background-color: #F5F5F5;
-}
-
-.marginT{
-    margin-top: 68px;
-}
-
-.border-task-add{
-    border:1px dashed #CCCCCC;
-    border-radius: 10px;
-}
-
-
-.border-task{
-    border: 1px solid #E9E9E9;
-}
-
-.bg-line{
-    background-color: #E9E9E9;
-}
-
-.bg-Priority-low{
-  background-color: #C3FFF1;
-}
-
-.font-priority-low{
-    color:#11A483;
-}
-
-.bg-Priority-medium{
-    background-color: #FFEFD6;
-  }
-  
-  .font-priority-medium{
-      color:#FFAF37;
-  }
-
-  .bg-Priority-high{
-    background-color: #FFE2DB;
-  }
-  
-  .font-priority-high{
-      color:#FF5F37;
-  }
-
-.bg-div{
-    background-color: #EBEDEF;
-}
-
-.font-color-description{
-    color:#7D7D7F;
-}
-
-.dark .dark\:font-color-description-dark{
-    color: #848890;
-}
-
-.border-div{
-    border:1px solid #EBEDEF;
-}
-
-.shadow-priority{
-    box-shadow: 0px 12px 24px -6px #1414190F;
-}
-
-.shadow-task{
-    box-shadow: 0px 4px 58.5px 0px #0000000F;
-
-}
-
-.shadow-sidebar{
-    box-shadow: 0px 4px 58.5px 0px #0000000F;
-
-}
-
-.width-side-bar{
-    width: 272px;
-}
-
-.fade-animation{
-    transition: transform 300ms ease-in-out;
-}
-
-.fade-out{
-    transform: translateX(272px);
-}
-
-@media (min-width:768px){
-    .fade-out{
-        transform: translateX(0);
-    }
-}
-
-
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: yekan,sans-serif;
+   }
+   
+   @font-face {
+       font-family: yekan;
+       src: url(./assets/B_Yekan/Yekan.ttf);
+   }
+   
+   .bg-body{
+       background-color: #FEFEFE;
+   }
+   
+   .dark .dark\:bg-body-dark{
+       background-color: #060C18;
+   }
+   
+   .dark .dark\:bg-side-bar-dark{
+       background-color: #091120;
+   }
+   
+   .font-colorP{
+       color: #242424;
+   }
+   
+   .font-color{
+       color:#7D7D7F;
+   }
+   
+   .dark .dark\:font-color-dark{
+       color:#848890;
+   }
+   
+   .font-color-items{
+       color:#525252;
+   }
+   
+   .font-color-title{
+       color:#696969;
+   }
+   
+   .font-color-primary{
+       color:#007BFF;
+   }
+   
+   .dark .dark\:font-color-primary-dark{
+       color:#57A8FF;
+   }
+   
+   .bg-primary{
+       background-color: rgba(0, 123, 255) ;
+   }
+   
+   .font-color-todo{
+       color:#AFAEB2;
+   }
+   
+   .dark .dark\:font-color-todo-dark{
+       color:#AFAEB2;
+   }
+   
+   .bg-button{
+       background-color: #F7F7F7;
+   }
+   
+   .dark .dark\:bg-button-dark{
+       background-color: #0C1B31;
+   }
+   
+   .dark .dark\:bg-button-moon-dark{
+       background-color: #002247;
+   }
+   
+   .dark .dark\:bg-button-sun-dark{
+       background-color: #0C1B31;
+   }
+   
+   .dark .dark\:bg-items-dark{
+       background-color: #041933;
+   }
+   
+   .bg-button-close{
+       background-color: #F5F5F5;
+   }
+   
+   .marginT{
+       margin-top: 68px;
+   }
+   
+   .border-task-add{
+       border:1px dashed #CCCCCC;
+       border-radius: 10px;
+   }
+   
+   
+   .border-task{
+       border: 1px solid #E9E9E9;
+   }
+   
+   .bg-line{
+       background-color: #E9E9E9;
+   }
+   
+   .bg-Priority-low{
+     background-color: #C3FFF1;
+   }
+   
+   .font-priority-low{
+       color:#11A483;
+   }
+   
+   .bg-Priority-medium{
+       background-color: #FFEFD6;
+     }
+     
+     .font-priority-medium{
+         color:#FFAF37;
+     }
+   
+     .bg-Priority-high{
+       background-color: #FFE2DB;
+     }
+     
+     .font-priority-high{
+         color:#FF5F37;
+     }
+   
+   .bg-div{
+       background-color: #EBEDEF;
+   }
+   
+   .font-color-description{
+       color:#7D7D7F;
+   }
+   
+   .dark .dark\:font-color-description-dark{
+       color: #848890;
+   }
+   
+   .border-div{
+       border:1px solid #EBEDEF;
+   }
+   
+   .shadow-priority{
+       box-shadow: 0px 12px 24px -6px #1414190F;
+   }
+   
+   .shadow-task{
+       box-shadow: 0px 4px 58.5px 0px #0000000F;
+   
+   }
+   
+   .shadow-sidebar{
+       box-shadow: 0px 4px 58.5px 0px #0000000F;
+   
+   }
+   
+   .width-side-bar{
+       width: 272px;
+   }
+   
+   .fade-animation{
+       transition: transform 300ms ease-in-out;
+   }
+   
+   .fade-out{
+       transform: translateX(272px);
+   }
+   
+   @media (min-width:768px){
+       .fade-out{
+           transform: translateX(0);
+       }
+   }
+   
+   
+   .parentDiv:has(.bg-Priority-low) .priority-border {
+       background-color: #11A483;
+   }
+   
+   .parentDiv:has(.bg-Priority-medium) .priority-border {
+       background-color: #FFAF37;
+   }
+   
+   .parentDiv:has(.bg-Priority-high) .priority-border {
+       background-color: #FF5F37;
+   }
+   
+   
+   
