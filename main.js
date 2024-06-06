@@ -89,11 +89,11 @@ closeDefineTask.addEventListener("click", closeTask);
 function closeTask() {
   definitionTask.style.display = "none";
   addTask.style.display = "flex";
-  if ((data = [])) {
-    backgroundDefault.style.display = "flex";
-  } else {
-    backgroundDefault.style.display = "none";
-  }
+  // if ((data = [])) {
+  //   backgroundDefault.style.display = "flex";
+  // } else {
+  //   backgroundDefault.style.display = "none";
+  // }
 }
 /* پایان بستن تعریف تسک */
 
