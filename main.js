@@ -202,6 +202,7 @@ const removeTask = (id) => {
   data = data.filter((task) => {
     return task.id !== id;
   });
+  localStorage.setItem("tasks", JSON.stringify(data));
   render(data);
 };
 /*پایان پاک کردن یک تسک دلخواه */
@@ -336,21 +337,7 @@ const updateTask = (id) =>{
 
   task.title = document.querySelector('#edit-title').value;
   task.desc = document.querySelector('#edit-desc').value;
-
+  localStorage.setItem("tasks", JSON.stringify(data));
   render(data);
 };
 
-// function doneTask(event) {
-//   if (event.target.classList.contains("check-box")) {
-//     const parentBox = event.target.closest(".parentDiv");
-//     const task = parentBox.querySelector("h2");
-//     const descDone = parentBox.querySelector("p");
-//     const priorityBorder = parentBox.querySelector(".priority-border");
-//     document.querySelector("#done").after(parentBox);
-//     task.style.textDecoration = "line-through";
-//     descDone.style.display = "none";
-//     parentBox.style.padding = "24px 20px";
-//     priorityBorder.style.height = "40px";
-//   }
-// }
-/* پایان تسک های انجام شده */
